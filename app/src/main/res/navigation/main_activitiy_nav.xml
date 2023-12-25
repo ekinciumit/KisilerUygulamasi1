@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activitiy_nav"
+    app:startDestination="@id/anasayfaFragment2">
+
+    <fragment
+        android:id="@+id/kisiKayitFragment"
+        android:name="com.example.kisileruygulamasi.ui.fragment.KisiKayitFragment"
+        android:label="fragment_kisi_kayit"
+        tools:layout="@layout/fragment_kisi_kayit" />
+    <fragment
+        android:id="@+id/kisiDetayFragment"
+        android:name="com.example.kisileruygulamasi.ui.fragment.KisiDetayFragment"
+        android:label="fragment_kisi_detay"
+        tools:layout="@layout/fragment_kisi_detay" >
+        <argument android:name="kisi"
+            app:argType="com.example.kisileruygulamasi.data.entity.Kisiler" />
+    </fragment>
+    <fragment
+        android:id="@+id/anasayfaFragment2"
+        android:name="com.example.kisileruygulamasi.ui.fragment.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/kisiKaiytGecis"
+            app:destination="@id/kisiKayitFragment" />
+        <action
+            android:id="@+id/kisiDetayGecis"
+            app:destination="@id/kisiDetayFragment" />
+    </fragment>
+</navigation>
