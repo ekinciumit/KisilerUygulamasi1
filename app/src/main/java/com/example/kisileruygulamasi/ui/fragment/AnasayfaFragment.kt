@@ -45,6 +45,7 @@ class AnasayfaFragment : Fragment() {
             override fun onQueryTextChange(newText: String): Boolean {
                 ara(newText)
                 return true
+
             }
 
             override fun onQueryTextSubmit(query: String): Boolean {
